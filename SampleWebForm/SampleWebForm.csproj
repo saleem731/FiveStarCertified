@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF3EEE28-8F1C-4589-BE42-8DAD477EC7DD}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SampleWebForm</RootNamespace>
+    <AssemblyName>SampleWebForm</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44359</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="advertising.aspx" />
+    <Content Include="App_Code\_notes\dwsync.xml" />
+    <Content Include="Avartech-IT-Services\Avartech-IT-Services-Intro-1.mp4" />
+    <Content Include="Avartech-IT-Services\Avartech-IT-Services-Intro-2.mp4" />
+    <Content Include="Avartech-IT-Services\blue-seal.png" />
+    <Content Include="Avartech-IT-Services\images\Avartech-IT-Services.jpg" />
+    <Content Include="Avartech-IT-Services\images\Avartech-Technical-Support-Small.jpg" />
+    <Content Include="Avartech-IT-Services\images\_notes\dwsync.xml" />
+    <Content Include="Avartech-IT-Services\index.html" />
+    <Content Include="Avartech-IT-Services\Long.mp4" />
+    <Content Include="Avartech-IT-Services\review-1.mp4" />
+    <Content Include="Avartech-IT-Services\Short1.mp4" />
+    <Content Include="Avartech-IT-Services\slider1.jpg" />
+    <Content Include="Avartech-IT-Services\slider1.png" />
+    <Content Include="Avartech-IT-Services\slider\css\style.css" />
+    <Content Include="Avartech-IT-Services\slider\css\_notes\dwsync.xml" />
+    <Content Include="Avartech-IT-Services\slider\img\data_centre1.jpg" />
+    <Content Include="Avartech-IT-Services\slider\img\holder.png" />
+    <Content Include="Avartech-IT-Services\slider\img\image277.png" />
+    <Content Include="Avartech-IT-Services\slider\img\server_AJTD.jpg" />
+    <Content Include="Avartech-IT-Services\slider\img\slider1.jpg" />
+    <Content Include="Avartech-IT-Services\slider\img\slider2.jpg" />
+    <Content Include="Avartech-IT-Services\slider\img\slider3.jpg" />
+    <Content Include="Avartech-IT-Services\slider\img\slider4.jpg" />
+    <Content Include="Avartech-IT-Services\slider\img\slider5.jpg" />
+    <Content Include="Avartech-IT-Services\slider\img\_notes\dwsync.xml" />
+    <Content Include="Avartech-IT-Services\slider\js\jquery.js" />
+    <Content Include="Avartech-IT-Services\slider\js\slider.js" />
+    <Content Include="Avartech-IT-Services\slider\js\_notes\dwsync.xml" />
+    <Content Include="Avartech-IT-Services\slider\slider.html" />
+    <Content Include="Avartech-IT-Services\slider\_notes\dwsync.xml" />
+    <Content Include="Avartech-IT-Services\_notes\dwsync.xml" />
+    <Content Include="Business\Accountants.html" />
+    <Content Include="Business\Architects.html" />
+    <Content Include="Business\Automotive.html" />
+    <Content Include="Business\business-search.html" />
+    <Content Include="Business\business-search1.html" />
+    <Content Include="Business\Business-Services.html" />
+    <Content Include="Business\city-search.html" />
+    <Content Include="Business\city-search1.html" />
+    <Content Include="Business\Construction.html" />
+    <Content Include="Business\Consumer-Products.html" />
+    <Content Include="Business\CONTRACTORS-HARDSCAPE.html" />
+    <Content Include="Business\Dentists.html" />
+    <Content Include="Business\Doctors.html" />
+    <Content Include="Business\Education.html" />
+    <Content Include="Business\Electricians.html" />
+    <Content Include="Business\Energy.html" />
+    <Content Include="Business\Entertainment.html" />
+    <Content Include="Business\Exterminators.html" />
+    <Content Include="Business\Financial-Services.html" />
+    <Content Include="Business\Health.html" />
+    <Content Include="Business\Home-Repair.html" />
+    <Content Include="Business\Hospitality.html" />
+    <Content Include="Business\Human-Resources.html" />
+    <Content Include="Business\images\Albuquerque-New-Mexico.jpg" />
+    <Content Include="Business\images\atlanta-georgia.jpg" />
+    <Content Include="Business\images\Austin-Texas.jpg" />
+    <Content Include="Business\images\avartech.jpg" />
+    <Content Include="Business\images\Baltimore-Maryland.jpg" />
+    <Content Include="Business\images\Boston-Massachusetts.jpg" />
+    <Content Include="Business\images\cc_icon.png" />
+    <Content Include="Business\images\charlotte-north-carolina.jpg" />
+    <Content Include="Business\images\chicago-illinois.jpg" />
+    <Content Include="Business\images\Cleveland-Ohio.jpg" />
+    <Content Include="Business\images\Colorado-Springs-Colorado.jpg" />
+    <Content Include="Business\images\Dallas-Texas.jpg" />
+    <Content Include="Business\images\Denver-Colorado.jpg" />
+    <Content Include="Business\images\Detroit-Michigan.jpg" />
+    <Content Include="Business\images\El-Paso-Texas.jpg" />
+    <Content Include="Business\images\Fort-Worth-Texas.jpg" />
+    <Content Include="Business\images\Fresno-California.jpg" />
+    <Content Include="Business\images\Honolulu-Hawaii.jpg" />
+    <Content Include="Business\images\Houston-Texas.jpg" />
+    <Content Include="Business\images\Jacksonville-Florida.jpg" />
+    <Content Include="Business\images\Kansas-City-Kansas.jpg" />
+    <Content Include="Business\images\Las-Vegas-Nevada.jpg" />
+    <Content Include="Business\images\Long-Beach-California.jpg" />
+    <Content Include="Business\images\Los-Angeles-California.jpg" />
+    <Content Include="Business\images\louisville-kentucky.jpg" />
+    <Content Include="Business\images\memphis-tennessee.jpg" />
+    <Content Include="Business\images\Mesa-Arizona.jpg" />
+    <Content Include="Business\images\Miami-Florida.jpg" />
+    <Content Include="Business\images\minneapolis-minnesota.jpg" />
+    <Content Include="Business\images\Nashville-Tennessee.jpg" />
+    <Content Include="Business\images\New-Orleans-Louisiana.jpg" />
+    <Content Include="Business\images\New-York-New-York.jpg" />
+    <Content Include="Business\images\oaklahoma-city-oaklahoma.jpg" />
+    <Content Include="Business\images\Oakland-California.jpg" />
+    <Content Include="Business\images\Omaha-Nebraska.jpg" />
+    <Content Include="Business\images\Orlando-Florida.jpg" />
+    <Content Include="Business\images\Palm-Beach-Florida.jpg" />
+    <Content Include="Business\images\Palo-Alto-California.jpg" />
+    <Content Include="Business\images\philadelphia-pennsylvania.jpg" />
+    <Content Include="Business\images\Phoenix-Arizona.jpg" />
+    <Content Include="Business\images\Portland-Oregon.jpg" />
+    <Content Include="Business\images\Raleigh-North-Carolina.jpg" />
+    <Content Include="Business\images\Sacramento-California.jpg" />
+    <Content Include="Business\images\Saint-Louis-Missouri.jpg" />
+    <Content Include="Business\images\San-Antonio-Texas.jpg" />
+    <Content Include="Business\images\San-Diego-California.jpg" />
+    <Content Include="Business\images\San-Francisco-California.jpg" />
+    <Content Include="Business\images\San-Jose-California.jpg" />
+    <Content Include="Business\images\seattle-washington.jpg" />
+    <Content Include="Business\images\seattle.jpg" />
+    <Content Include="Business\images\spokane-washington.jpg" />
+    <Content Include="Business\images\Tampa-Florida.jpg" />
+    <Content Include="Business\images\Tucson-Arizona.jpg" />
+    <Content Include="Business\images\tulsa-oklahoma.jpg" />
+    <Content Include="Business\images\Vancouver-Washington.jpg" />
+    <Content Include="Business\images\Virginia-Beach-Virginia.jpg" />
+    <Content Include="Business\images\Washington-DC.jpg" />
+    <Content Include="Business\images\_notes\dwsync.xml" />
+    <Content Include="Business\Information-Technology.html" />
+    <Content Include="Business\Insurance.html" />
+    <Content Include="Business\Leasing-Commercial.html" />
+    <Content Include="Business\Legal.html" />
+    <Content Include="Business\Logistics.html" />
+    <Content Include="Business\Managed-Service.html" />
+    <Content Include="Business\Manufacturing.html" />
+    <Content Include="Business\Optometrists.html" />
+    <Content Include="Business\Painters.html" />
+    <Content Include="Business\Plumbers.html" />
+    <Content Include="Business\profile-template.html" />
+    <Content Include="Business\Property-Managers.html" />
+    <Content Include="Business\Real-Estate.html" />
+    <Content Include="Business\Recreation.html" />
+    <Content Include="Business\Restaurants.html" />
+    <Content Include="Business\Retailers.html" />
+    <Content Include="Business\Roofing.html" />
+    <Content Include="Business\Security.html" />
+    <Content Include="Business\Self-Storage.html" />
+    <Content Include="Business\Solar.html" />
+    <Content Include="Business\Technology.html" />
+    <Content Include="Business\Telecommunications.html" />
+    <Content Include="Business\Transportation.html" />
+    <Content Include="Business\Utilities.html" />
+    <Content Include="Business\_notes\dwsync.xml" />
+    <Content Include="career-inquiry.aspx" />
+    <Content Include="CImage.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="d2oc0ihd6a5bt.cloudfront.net\wp-content\themes\phoenix\bootstrap\css\bootstrap.min.css" />
+    <Content Include="d2oc0ihd6a5bt.cloudfront.net\wp-content\themes\phoenix\bootstrap\css\_notes\dwsync.xml" />
+    <Content Include="d2oc0ihd6a5bt.cloudfront.net\wp-content\themes\phoenix\bootstrap\js\bootstrap.min.js" />
+    <Content Include="d2oc0ihd6a5bt.cloudfront.net\wp-content\themes\phoenix\bootstrap\js\_notes\dwsync.xml" />
+    <Content Include="d2oc0ihd6a5bt.cloudfront.net\wp-content\themes\phoenix\font-awesome\css\font-awesome.min.css" />
+    <Content Include="d2oc0ihd6a5bt.cloudfront.net\wp-content\themes\phoenix\font-awesome\css\_notes\dwsync.xml" />
+    <Content Include="d2oc0ihd6a5bt.cloudfront.net\wp-content\uploads\sites\465\2014\04\bg_section2.jpg" />
+    <Content Include="d2oc0ihd6a5bt.cloudfront.net\wp-content\uploads\sites\465\2014\04\_notes\dwsync.xml" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Get-Certified.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="index.html" />
+    <Content Include="investor.aspx" />
+    <Content Include="nomination.aspx" />
+    <Content Include="press-newsroom.aspx" />
+    <Content Include="privacy.html" />
+    <Content Include="product-search.aspx" />
+    <Content Include="registration.aspx" />
+    <Content Include="resources\css\allbdaf.css" />
+    <Content Include="resources\css\fa.css" />
+    <Content Include="resources\css\_notes\dwsync.xml" />
+    <Content Include="resources\fonts\fa.css" />
+    <Content Include="resources\fonts\_notes\dwsync.xml" />
+    <Content Include="resources\images\background-home.jpg" />
+    <Content Include="resources\images\background-home2.jpg" />
+    <Content Include="resources\images\background-home3.jpg" />
+    <Content Include="resources\images\background-logo.jpg" />
+    <Content Include="resources\images\bg_section3.jpg" />
+    <Content Include="resources\images\boa-banner.png" />
+    <Content Include="resources\images\cc_icon.png" />
+    <Content Include="resources\images\CMN_FooterLogo.png" />
+    <Content Include="resources\images\cs.png" />
+    <Content Include="resources\images\favicon.ico" />
+    <Content Include="resources\images\Five-Star-Certified-Logo-Medium.png" />
+    <Content Include="resources\images\Five-Star-Certified-Logo-Small.png" />
+    <Content Include="resources\images\Five-Star-Certified-Logo-Star-Only.png" />
+    <Content Include="resources\images\Five-Star-Certified-Logo.jpg" />
+    <Content Include="resources\images\Five-Star-Certified-Plaque-Avartech-IT-Services.jpg" />
+    <Content Include="resources\images\Fivestarcertified-Trophy-Crystal-Box.jpg" />
+    <Content Include="resources\images\FiveStarCertified-veterinarian-Animal-Hospital.JPG" />
+    <Content Include="resources\images\FiveStarCertifiedv5.jpg" />
+    <Content Include="resources\images\FiveStarCertified_ExcellenceAward2017.png" />
+    <Content Include="resources\images\House-Cleaning-Maid-Service.jpg" />
+    <Content Include="resources\images\icons\blue694c.png" />
+    <Content Include="resources\images\icons\color694c.png" />
+    <Content Include="resources\images\icons\gold694c.png" />
+    <Content Include="resources\images\icons\gray1700.png" />
+    <Content Include="resources\images\icons\gray694c.png" />
+    <Content Include="resources\images\icons\large694c.png" />
+    <Content Include="resources\images\icons\red694c.png" />
+    <Content Include="resources\images\icons\_notes\dwsync.xml" />
+    <Content Include="resources\images\illustrations\rmx-beachesba24.png" />
+    <Content Include="resources\images\illustrations\rmx-default-ipadba24.png" />
+    <Content Include="resources\images\illustrations\rmx-defaultba24.png" />
+    <Content Include="resources\images\illustrations\rmx-hills.png" />
+    <Content Include="resources\images\illustrations\rmx-midwestba24.png" />
+    <Content Include="resources\images\illustrations\rmx-mountainsba24.png" />
+    <Content Include="resources\images\illustrations\rmx-night-ipadba24.png" />
+    <Content Include="resources\images\illustrations\rmx-southwestba24.png" />
+    <Content Include="resources\images\illustrations\rmx-urbanba24.png" />
+    <Content Include="resources\images\illustrations\rmx-worldwide-ipadba24.png" />
+    <Content Include="resources\images\illustrations\_notes\dwsync.xml" />
+    <Content Include="resources\images\inrixdt-active-btn.png" />
+    <Content Include="resources\images\inrixdt-disabled-btn.png" />
+    <Content Include="resources\images\inrixdt-hover-btn.png" />
+    <Content Include="resources\images\inrixdt-normal-btn.png" />
+    <Content Include="resources\images\inrixdt-slider-minus.png" />
+    <Content Include="resources\images\inrixdt-slider-moon.png" />
+    <Content Include="resources\images\inrixdt-slider-plus.png" />
+    <Content Include="resources\images\inrixdt-slider-star.png" />
+    <Content Include="resources\images\Kitchen-Remodeling.jpg" />
+    <Content Include="resources\images\Logo-Facebook.jpg" />
+    <Content Include="resources\images\painting-contractors.png" />
+    <Content Include="resources\images\rmx-bg-agentofficesearch-head2467.jpg" />
+    <Content Include="resources\images\rmx-bg-body2467.png" />
+    <Content Include="resources\images\rmx-bg-decomap.png" />
+    <Content Include="resources\images\rmx-bg-stars2467.png" />
+    <Content Include="resources\images\rmx-loader-small2467.gif" />
+    <Content Include="resources\images\rmx-photo-coming-soon2467.jpg" />
+    <Content Include="resources\images\service-contracts .png" />
+    <Content Include="resources\images\service-contracts.jpg" />
+    <Content Include="resources\images\ServiceProAdvisor-Logo-Medium.jpg" />
+    <Content Include="resources\images\technical-support.jpg" />
+    <Content Include="resources\images\_notes\dwsync.xml" />
+    <Content Include="resources\js\libs\modernizr.js" />
+    <Content Include="resources\js\libs\require\require.js" />
+    <Content Include="resources\js\libs\require\_notes\dwsync.xml" />
+    <Content Include="resources\js\libs\_notes\dwsync.xml" />
+    <Content Include="resources\slider\img\data_centre1.jpg" />
+    <Content Include="resources\slider\img\holder.png" />
+    <Content Include="resources\slider\img\image277.png" />
+    <Content Include="resources\slider\img\server_AJTD.jpg" />
+    <Content Include="resources\slider\img\slider1.jpg" />
+    <Content Include="resources\slider\img\slider2.jpg" />
+    <Content Include="resources\slider\img\slider3.jpg" />
+    <Content Include="resources\slider\img\slider4.jpg" />
+    <Content Include="resources\slider\img\slider5.jpg" />
+    <Content Include="resources\slider\img\_notes\dwsync.xml" />
+    <Content Include="resources\videos\downloaded-on-fiver-2015-09-29-1305-11sec-Intro %282%29.mp4" />
+    <Content Include="resources\videos\downloaded-on-fiver-2015-09-29-1305-Intro.mp4" />
+    <Content Include="resources\_notes\dwsync.xml" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="slider1\css\style.css" />
+    <Content Include="slider1\css\_notes\dwsync.xml" />
+    <Content Include="slider1\img\holder.png" />
+    <Content Include="slider1\img\slider1.jpg" />
+    <Content Include="slider1\img\slider2.JPG" />
+    <Content Include="slider1\img\slider3.JPG" />
+    <Content Include="slider1\img\slider4.JPG" />
+    <Content Include="slider1\img\slider5.JPG" />
+    <Content Include="slider1\img\slider6.JPG" />
+    <Content Include="slider1\img\_notes\dwsync.xml" />
+    <Content Include="slider1\js\jquery.js" />
+    <Content Include="slider1\js\slider.js" />
+    <Content Include="slider1\js\_notes\dwsync.xml" />
+    <Content Include="slider1\slider.html" />
+    <Content Include="slider1\_notes\dwsync.xml" />
+    <Content Include="worldwide-search.aspx" />
+    <Content Include="Write-A-Review.aspx" />
+    <Content Include="_notes\dwsync.xml" />
+    <Content Include="resources\images\Five-Star-Certified-Logo.xcf" />
+    <Content Include="resources\images\FiveStarCertified_ExcellenceAward2017.xcf" />
+    <Content Include="resources\images\FiveStarCertified_ExcellenceAward2022.xcf" />
+    <Content Include="resources\images\icons\Thumbs.db" />
+    <Content Include="resources\images\illustrations\Thumbs.db" />
+    <Content Include="resources\images\Logo-MASTER.xcf" />
+    <Content Include="resources\images\Logo-Star-Only-TOP-INDEX-NO-YEAR.xcf" />
+    <Content Include="resources\images\Logo-Star-Only-TOP-INDEX.xcf" />
+    <Content Include="resources\images\Thumbs.db" />
+    <None Include="Scripts\jquery-3.7.0.intellisense.js" />
+    <Content Include="Scripts\jquery-3.7.0.js" />
+    <Content Include="Scripts\jquery-3.7.0.min.js" />
+    <Content Include="Scripts\jquery-3.7.0.slim.js" />
+    <Content Include="Scripts\jquery-3.7.0.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="send-inquiry-Avartech.aspx" />
+    <Content Include="send-request-quote-Avartech.aspx" />
+    <Content Include="Site.Master" />
+    <Content Include="sitemap.html" />
+    <Content Include="terms-of-use.html" />
+    <Content Include="ThankYou.html" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helpers\RandomImage.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CImage.aspx.cs">
+      <DependentUpon>CImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.7.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.7.0.min.map" />
+    <Content Include="slider1\img\Thumbs.db" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61389</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44359/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

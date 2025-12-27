@@ -1,0 +1,34 @@
+Message :Mailbox unavailable. The server response was: <tpc81@yahoo.com> Relay is not allowed<br/>
+StackTrace :   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at ASP.product_search_aspx.btnSubmit_Click1(Object sender, EventArgs e) in d:\Coding\SampleWebForm\SampleWebForm\product-search.aspx:line 40
+Date :23/12/2025 5:40:51 pm
+
+-----------------------------------------------------------------------------
+
+Message :Mailbox unavailable. The server response was: <tpc81@yahoo.com> Relay is not allowed<br/>
+StackTrace :   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at ASP.product_search_aspx.btnSubmit_Click1(Object sender, EventArgs e) in d:\Coding\SampleWebForm\SampleWebForm\product-search.aspx:line 40
+Date :23/12/2025 5:41:16 pm
+
+-----------------------------------------------------------------------------
+
+Message :Object reference not set to an instance of an object.<br/>
+StackTrace :   at ASP.product_search_aspx.btnSubmit_Click1(Object sender, EventArgs e) in d:\Coding\SampleWebForm\SampleWebForm\product-search.aspx:line 11
+Date :23/12/2025 5:42:03 pm
+
+-----------------------------------------------------------------------------
+
+Message :Mailbox unavailable. The server response was: <tpc81@yahoo.com> Relay is not allowed<br/>
+StackTrace :   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at ASP.product_search_aspx.btnSubmit_Click1(Object sender, EventArgs e) in d:\Coding\SampleWebForm\SampleWebForm\product-search.aspx:line 40
+Date :23/12/2025 5:42:24 pm
+
+-----------------------------------------------------------------------------
+
+Message :Mailbox unavailable. The server response was: <saleemk029@gmail.com> Relay is not allowed<br/>
+StackTrace :   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at ASP.product_search_aspx.btnSubmit_Click1(Object sender, EventArgs e) in d:\Coding\SampleWebForm\SampleWebForm\product-search.aspx:line 40
+Date :23/12/2025 5:43:18 pm
+
+-----------------------------------------------------------------------------
+

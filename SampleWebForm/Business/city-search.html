@@ -406,7 +406,12 @@ END-REMOVED 2015-08-11 2115 BY:RES --*/
                             <li class="hpsearch-item hpsearch-price">
                                 <fieldset>
                                     <div class="hpsearch-list">
-                                        <span class="field select field-5"><select id="Category " name="Category">
+                                        <!-- START-REMOVED 2024-12-19 BY:Auto IE;Remove trailing space from Category select ID attribute to fix selector issues. VARIABLES; None -->
+                                        <!-- <span class="field select field-5"><select id="Category " name="Category"> -->
+                                        <!-- END-REMOVED 2024-12-19 BY:Auto -->
+                                        <!-- START-ADDED 2024-12-19 BY:Auto IE;Fixed Category select ID attribute by removing trailing space. VARIABLES; None -->
+                                        <span class="field select field-5"><select id="Category" name="Category">
+                                        <!-- END-ADDED 2024-12-19 BY:Auto -->
                                             <!-- START-Modified  2015-08-02 0252 BY:axcelleria -->
 
                                             <option value="Accountants">
@@ -845,7 +850,7 @@ END-REMOVED 2015-08-11 2115 BY:RES --*/
                                 </li>
 
                                 <li class="inline-unit margin-half-right">
-                                    <a class="icon icons-twitter-color-27x27 " href="http://www.twitter.com " target="_new">Twitter</a>
+                                    <a class="icon icons-twitter-color-27x27 " href="https://www.twitter.com " target="_new">Twitter</a>
                                 </li>
 
                                 <li class="inline-unit margin-half-right">
@@ -853,15 +858,15 @@ END-REMOVED 2015-08-11 2115 BY:RES --*/
                                 </li>
 
                                 <li class="inline-unit margin-half-right">
-                                    <a class="icon icons-youtube-color-27x27 " href="http://www.youtube.com " target="_new">YouTube</a>
+                                    <a class="icon icons-youtube-color-27x27 " href="https://www.youtube.com " target="_new">YouTube</a>
                                 </li>
 
                                 <li class="inline-unit margin-half-right">
-                                    <a class="icon icons-linkedin-color-27x27 " href="http://www.linkedin.com " target="_new">LinkedIn</a>
+                                    <a class="icon icons-linkedin-color-27x27 " href="https://www.linkedin.com " target="_new">LinkedIn</a>
                                 </li>
 
                                 <li class="inline-unit">
-                                    <a class="icon icons-pinterest-color-27x27 " href="http://pinterest.com " target="_new">Pinterest</a>
+                                    <a class="icon icons-pinterest-color-27x27 " href="https://pinterest.com " target="_new">Pinterest</a>
                                 </li>
                             </ul>
                         </div>
@@ -874,7 +879,7 @@ END-REMOVED 2015-08-11 2115 BY:RES --*/
 
                                 <ul class="inline-row">
                                     <li class="inline-unit">
-                                        <a class="icon icons-iphoneappstore-black-99x30 " href="http://itunes.apple.com " target="_new">Download on the AppStore</a>
+                                        <a class="icon icons-iphoneappstore-black-99x30 " href="https://itunes.apple.com " target="_new">Download on the AppStore</a>
                                     </li>
 
                                     <li class="inline-unit">
@@ -889,14 +894,14 @@ END-REMOVED 2015-08-11 2115 BY:RES --*/
 
                                 <ul class="inline-row">
                                     <li class="inline-unit margin-half-right">
-                                        <a class="icon icons-susangkomencure-color-54x30 " href="http://ww5.komen.org/ " target="_new">Susan G Komen for the Cure</a>
+                                        <a class="icon icons-susangkomencure-color-54x30 " href="https://ww5.komen.org/ " target="_new">Susan G Komen for the Cure</a>
                                     </li>
 
                                     <li class="inline-unit">
                                         <!-- a target="_new " class="icon icons-childrensmiraclenetwork-color-49x30 " href="/c/about/FiveStarCertified.com-cares">
                             Children's Miracle Network
                         </a -->
-                                        <a href="http://give.childrensmiraclenetworkhospitals.org/"><img alt="Children 's Miracle Network" src="http://www.fivestarcertified.com/resources/images/CMN_FooterLogo.png"></a>
+                                        <a href="https://give.childrensmiraclenetworkhospitals.org/"><img alt="Children 's Miracle Network" src="https://www.fivestarcertified.com/resources/images/CMN_FooterLogo.png"></a>
                                     </li>
                                 </ul>
                             </div><!-- / .grid-unit -->
@@ -940,9 +945,7 @@ END-REMOVED 2015-08-11 2115 BY:RES --*/
 
             for (var i = 0; i < parts.length; i++) {
                 var temp = parts[i].split("=");
-                var temp0 =  $_GET[decodeURIComponent(temp[0])];
-                var temp1 = decodeURIComponent(temp[1]);
-                temp0 = temp1;
+                $_GET[decodeURIComponent(temp[0])] = decodeURIComponent(temp[1]);
             }
 
             var map = $_GET['map'],
@@ -962,8 +965,9 @@ END-REMOVED 2015-08-11 2115 BY:RES --*/
                 jQuery('[src*=google]').attr('src', map); //set map source image 
             /*-- END-EDIT 2015-08-07 11:10AM BY:axcelleria --*/
 
+            /*-- START-REMOVED 2024-12-19 BY:Auto IE;Remove inline search functionality code as it has been moved to shared js/search-handler.js file. STEP-1;Remove change event handler STEP-2;Remove URL building logic CALLS; jQuery change event, attr method CALLED-BY; None VARIABLES; cat, cit, map, url --*/
             /*-- START-EDIT 2015-08-07 BY:axcelleria --*/
-            $('#Category, #City').change(function() {//add event to change link value to selected input
+            /* $('#Category, #City').change(function() {//add event to change link value to selected input
                 var cat = $('#Category').val(), //get current selected value 
                     cit = $('#City').val(),
                     map = $('#City option:selected').attr('data-map'),
@@ -972,8 +976,19 @@ END-REMOVED 2015-08-11 2115 BY:RES --*/
                     url = "./" + cat.split(' ').join('-') + '.html?city='+ cit +'&map='+map; //NOTE: case sensitive
 
                 $(' .hpsearch-list li> a').attr('href', url);
-			}); //Change link value for search button }); /*-- END-EDIT 2015-08-07 BY:axcelleria --*/
+			}); //Change link value for search button }); */
+            /*-- END-EDIT 2015-08-07 BY:axcelleria --*/
+            /*-- END-REMOVED 2024-12-19 BY:Auto --*/
+
+            /*-- START-ADDED 2024-12-19 BY:Auto IE;Search functionality moved to shared js/search-handler.js file for better maintainability. CALLS; js/search-handler.js CALLED-BY; None VARIABLES; None --*/
+            /*-- START-EDIT 2015-08-07 BY:axcelleria --*/
+            // Search functionality moved to shared js/search-handler.js
+            /*-- END-EDIT 2015-08-07 BY:axcelleria --*/
+            /*-- END-ADDED 2024-12-19 BY:Auto --*/
 		</script>
+		<!-- START-ADDED 2024-12-19 BY:Auto IE;Include shared search handler JavaScript file. STEP-1;Load shared search functionality CALLS; js/search-handler.js CALLED-BY; None VARIABLES; None -->
+		<script src="./js/search-handler.js" type="text/javascript"></script>
+		<!-- END-ADDED 2024-12-19 BY:Auto -->
 		<!-- START 2015-09-02 1000  BY:AXCELLERIA;
 		dynamically change map based on selected map on index
 		-->

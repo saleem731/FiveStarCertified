@@ -57,8 +57,25 @@
                 lblError.Text = "Invalid Captcha Code";
             }
         }
+        catch (System.Net.Mail.SmtpException smtpEx)
+        {
+            // Log detailed error to file
+            using (System.IO.StreamWriter writer = new System.IO.StreamWriter(AppDomain.CurrentDomain.BaseDirectory + @"\error.txt", true))
+            {
+                writer.WriteLine("SMTP Error - Message :" + smtpEx.Message + "<br/>" + Environment.NewLine + "StackTrace :" +
+                                 smtpEx.StackTrace +
+                                 "" + Environment.NewLine + "Date :" + DateTime.Now.ToString());
+                writer.WriteLine(Environment.NewLine +
+                                 "-----------------------------------------------------------------------------" +
+                                 Environment.NewLine);
+            }
+            // Display user-friendly error message
+            lblStatus.Text = "";
+            lblError.Text = "Unable to send email. Please try again later or contact support if the problem persists.";
+        }
         catch (Exception ex)
         {
+            // Log detailed error to file
             using (System.IO.StreamWriter writer = new System.IO.StreamWriter(AppDomain.CurrentDomain.BaseDirectory + @"\error.txt", true))
             {
                 writer.WriteLine("Message :" + ex.Message + "<br/>" + Environment.NewLine + "StackTrace :" +
@@ -67,8 +84,10 @@
                 writer.WriteLine(Environment.NewLine +
                                  "-----------------------------------------------------------------------------" +
                                  Environment.NewLine);
-    lblError.Text = ex.Message; 
             }
+            // Display user-friendly error message
+            lblStatus.Text = "";
+            lblError.Text = "An error occurred while processing your request. Please try again later or contact support if the problem persists.";
         }
     }
 </script>
@@ -337,13 +356,13 @@ body,td,th {
 <link rel="stylesheet" href="./resources/css/allbdaf.css" />
     <!-- link rel="stylesheet" type="text/css" href="../../../files.a2.FiveStarCertified.com/styles/jFeaturedList/jFeaturedList-style.css" />
     <link rel="stylesheet" type="text/css" media="all" href="../indexcf85.html?css=styles/cms.v.1352755983" /-->
-    <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"></script> -->
+    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"></script> -->
 </head>
 <body>
     <div style="width: 100%; overflow: hidden;">
         <div id="fb-root">
         </div>
-        <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+        <script src="https://connect.facebook.net/en_US/all.js#xfbml=1"></script>
         <div id="site" class="site">
             <header class="site-head" id="site-head">
               <h2 class="site-title accessible">FiveStarCertified</h2>
@@ -900,19 +919,19 @@ body,td,th {
                                     <a target="_new" class="icon icons-facebook-color-27x27" href="https://www.facebook.com/fiveStarCertified">Facebook </a>
                                 </li>
                                 <li class="inline-unit margin-half-right">
-                                    <a target="_new" class="icon icons-twitter-color-27x27" href="http://www.twitter.com">Twitter </a>
+                                    <a target="_new" class="icon icons-twitter-color-27x27" href="https://www.twitter.com">Twitter </a>
                                 </li>
                                 <li class="inline-unit margin-half-right">
                                     <a target="_new" class="icon icons-googleplus-color-27x27" href="https://plus.google.com">Google+ </a>
                                 </li>
                                 <li class="inline-unit margin-half-right">
-                                    <a target="_new" class="icon icons-youtube-color-27x27" href="http://www.youtube.com">YouTube </a>
+                                    <a target="_new" class="icon icons-youtube-color-27x27" href="https://www.youtube.com">YouTube </a>
                                 </li>
                                 <li class="inline-unit margin-half-right">
-                                    <a target="_new" class="icon icons-linkedin-color-27x27" href="http://www.linkedin.com">LinkedIn </a>
+                                    <a target="_new" class="icon icons-linkedin-color-27x27" href="https://www.linkedin.com">LinkedIn </a>
                                 </li>
                                 <li class="inline-unit">
-                                    <a target="_new" class="icon icons-pinterest-color-27x27" href="http://pinterest.com">Pinterest </a>
+                                    <a target="_new" class="icon icons-pinterest-color-27x27" href="https://pinterest.com">Pinterest </a>
                                 </li>
                             </ul>
                         </div>
@@ -922,7 +941,7 @@ body,td,th {
                                 <h6 class="text-4 margin-bottom">Our  apps</h6>
                                 <ul class="inline-row">
                                     <li class="inline-unit">
-                                        <a target="_new" class="icon icons-iphoneappstore-black-99x30" href="http://itunes.apple.com">Download on the AppStore </a>
+                                        <a target="_new" class="icon icons-iphoneappstore-black-99x30" href="https://itunes.apple.com">Download on the AppStore </a>
                                     </li>
                                     <li class="inline-unit">
                                         <a target="_new" class="icon icons-androidappstore-black-86x30" href="https://play.google.com/store">Get it on Google Play </a>
@@ -935,14 +954,14 @@ body,td,th {
                                 <h6 class="text-4 margin-bottom">We  support</h6>
                                 <ul class="inline-row">
                                     <li class="inline-unit margin-half-right">
-                                        <a target="_new" class="icon icons-susangkomencure-color-54x30" href="http://ww5.komen.org/">Susan G Komen for the Cure </a>
+                                        <a target="_new" class="icon icons-susangkomencure-color-54x30" href="https://ww5.komen.org/">Susan G Komen for the Cure </a>
                                     </li>
                                     <li class="inline-unit">
                                         <!-- a target="_new" class="icon icons-childrensmiraclenetwork-color-49x30" href="/c/about/FiveStarCertified.com-cares">
 							Children's Miracle Network
 						</a -->
-                                        <a href="http://give.childrensmiraclenetworkhospitals.org/">
-                                            <img alt="Children's Miracle Network" src="http://www.fivestarcertified.com/resources/images/CMN_FooterLogo.png">
+                                        <a href="https://give.childrensmiraclenetworkhospitals.org/">
+                                            <img alt="Children's Miracle Network" src="https://www.fivestarcertified.com/resources/images/CMN_FooterLogo.png">
                                         </a>
                                     </li>
                                 </ul>
@@ -967,7 +986,7 @@ body,td,th {
                         <a rel="nofollow" class="link-8 js-privacypolicy" href="privacy.html">Privacy Policy </a>
                     </li>
                     <li class="list-delim-item">
-                        <a class="link-8" href="http://www.FiveStarCertified.com">FiveStarCertified.com &reg;</a>
+                        <a class="link-8" href="https://www.FiveStarCertified.com">FiveStarCertified.com &reg;</a>
                     </li>
                 </ul>
                 <small style="text-align: center;" class="site-disclaimer text-5">FiveStarCertified.com  is an Equal Opportunity Employer and supports the Fair business Act. </small>

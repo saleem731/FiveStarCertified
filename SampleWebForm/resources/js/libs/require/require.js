@@ -59,7 +59,7 @@ var requirejs, require, define;
     }
 
     function makeError(e, t, n, r) {
-        var i = new Error(t + "\nhttp://requirejs.org/docs/errors.html#" + e);
+        var i = new Error(t + "\nhttps://requirejs.org/docs/errors.html#" + e);
         return i.requireType = e, i.requireModules = r, n && (i.originalError = n), i
     }
 
@@ -588,7 +588,7 @@ var requirejs, require, define;
     }, req.load = function(e, t, n) {
         var r = e && e.config || {},
             i;
-        if (isBrowser) return i = r.xhtml ? document.createElementNS("http://www.w3.org/1999/xhtml", "html:script") : document.createElement("script"), i.type = r.scriptType || "text/javascript", i.charset = "utf-8", i.async = !0, i.setAttribute("data-requirecontext", e.contextName), i.setAttribute("data-requiremodule", t), i.attachEvent && !(i.attachEvent.toString && i.attachEvent.toString().indexOf("[native code") < 0) && !isOpera ? (useInteractive = !0, i.attachEvent("onreadystatechange", e.onScriptLoad)) : (i.addEventListener("load", e.onScriptLoad, !1), i.addEventListener("error", e.onScriptError, !1)), i.src = n, currentlyAddingScript = i, baseElement ? head.insertBefore(i, baseElement) : head.appendChild(i), currentlyAddingScript = null, i;
+        if (isBrowser) return i = r.xhtml ? document.createElementNS("https://www.w3.org/1999/xhtml", "html:script") : document.createElement("script"), i.type = r.scriptType || "text/javascript", i.charset = "utf-8", i.async = !0, i.setAttribute("data-requirecontext", e.contextName), i.setAttribute("data-requiremodule", t), i.attachEvent && !(i.attachEvent.toString && i.attachEvent.toString().indexOf("[native code") < 0) && !isOpera ? (useInteractive = !0, i.attachEvent("onreadystatechange", e.onScriptLoad)) : (i.addEventListener("load", e.onScriptLoad, !1), i.addEventListener("error", e.onScriptError, !1)), i.src = n, currentlyAddingScript = i, baseElement ? head.insertBefore(i, baseElement) : head.appendChild(i), currentlyAddingScript = null, i;
         isWebWorker && (importScripts(n), e.completeLoad(t))
     }, isBrowser && eachReverse(scripts(), function(e) {
         head || (head = e.parentNode), dataMain = e.getAttribute("data-main");
